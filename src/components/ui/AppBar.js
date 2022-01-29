@@ -1,16 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { startLoadingCategories } from '../../actions/products';
+import { Link } from 'react-router-dom';
+import { startLogout } from '../../actions/auth';
 
 export const AppBar = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(startLoadingCategories());
-  }, [dispatch]);
-  
-  const { categories } = useSelector(state => state.data);
+
+  const { auth,cart } = useSelector(state => state);
+
+  const {user}=auth;
+  const {userCart}=cart;
+
+
+
+  const handleLogout = () => {
+    dispatch(startLogout());
+  }
+
   return (
 
     <header className="header shop">
@@ -33,9 +41,13 @@ export const AppBar = () => {
               <div className="right-content">
                 <ul className="list-main">
                   <li><i className="ti-location-pin" /> Mexico</li>
-                  <li><i className="ti-alarm-clock" /> <a href="#">Daily deal</a></li>
-                  <li><i className="ti-user" /> <a href="#">Mi cuenta</a></li>
-                  <li><i className="ti-power-off" /><a href="login.html#">Iniciar Sesión</a></li>
+                  <li><i className="ti-alarm-clock" /> <a href="#w">Daily deal</a></li>
+                  <li><i className="ti-user" /> <a href="#w">{user.username}</a></li>
+                  <li>
+                    <i className="ti-power-off" />
+                    <a href="#w" onClick={handleLogout}>Logout</a>
+
+                  </li>
                 </ul>
               </div>
               {/* End Top Right */}
@@ -71,10 +83,10 @@ export const AppBar = () => {
             <div className="col-lg-8 col-md-7 col-12">
               <div className="search-bar-top">
                 <div className="search-bar">
-                 
-                  
+
+
                   <form>
-                    <input name="search" placeholder="Busca un producto aqui.." type="search" />
+                    <input name="search" placeholder="Search a product here.." type="search" />
                     <button className="btnn"><i className="ti-search" /></button>
                   </form>
                 </div>
@@ -83,33 +95,28 @@ export const AppBar = () => {
             <div className="col-lg-2 col-md-3 col-12">
               <div className="right-bar">
                 {/* Search Form */}
-                <div className="sinlge-bar">
-                  <a href="#" className="single-icon"><i className="fa fa-heart-o" aria-hidden="true" /></a>
-                </div>
-                <div className="sinlge-bar">
-                  <a href="#" className="single-icon"><i className="fa fa-user-circle-o" aria-hidden="true" /></a>
-                </div>
+
                 <div className="sinlge-bar shopping">
-                  <a href="#" className="single-icon"><i className="ti-bag" /> <span className="total-count">2</span></a>
+                  <a href="#w" className="single-icon"><i className="ti-bag" /> <span className="total-count">{(userCart[0] && userCart[0].products.length)}</span></a>
                   {/* Shopping Item */}
                   <div className="shopping-item">
                     <div className="dropdown-cart-header">
-                      <span>2 Items</span>
-                      <a href="#">View Cart</a>
+                      <span>{(userCart[0] && userCart[0].products.length)} products</span>
+                      <a href="#w">View Cart</a>
                     </div>
                     <ul className="shopping-list">
-                      <li>
-                        <a href="#" className="remove" title="Remove this item"><i className="fa fa-remove" /></a>
-                        <a className="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#" /></a>
-                        <h4><a href="#">Woman Ring</a></h4>
-                        <p className="quantity">1x - <span className="amount">$99.00</span></p>
-                      </li>
-                      <li>
-                        <a href="#" className="remove" title="Remove this item"><i className="fa fa-remove" /></a>
-                        <a className="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#" /></a>
-                        <h4><a href="#">Woman Necklace</a></h4>
-                        <p className="quantity">1x - <span className="amount">$35.00</span></p>
-                      </li>
+                     {
+                       userCart[0] &&
+                       userCart[0].products.map(product=>{
+                         return  <li key={product.productId}>
+                         <a href="#w" className="remove" title="Remove this item"><i className="fa fa-remove" /></a>
+                         <a className="cart-img" href="#w"><img src="https://via.placeholder.com/70x70" alt="#" /></a>
+                         <h4><a href="#w">Product Id: {product.productId}</a></h4>
+                         <p className="quantity"> <span className="amount">Quantity: {product.quantity}</span></p>
+                       </li>
+                       })
+                     }
+                     
                     </ul>
                     <div className="bottom">
                       <div className="total">
@@ -131,19 +138,7 @@ export const AppBar = () => {
         <div className="container">
           <div className="cat-nav-head">
             <div className="row">
-              <div className="col-lg-3">
-                <div className="all-category">
-                  <h3 className="cat-heading"><i className="fa fa-bars" aria-hidden="true" />CATEGORIAS</h3>
-                  <ul className="main-category">
-                    {
-                        categories.map(category => {
-                          return <li key={category}><a href="#">{category} <i className="fa fa-angle-right" aria-hidden="true" /></a>
-                          </li>
-                        })
-                    }
-                  </ul>
-                </div>
-              </div>
+
               <div className="col-lg-9 col-12">
                 <div className="menu-area">
                   {/* Main Menu */}
@@ -151,10 +146,9 @@ export const AppBar = () => {
                     <div className="navbar-collapse">
                       <div className="nav-inner">
                         <ul className="nav main-menu menu navbar-nav">
-                          <li className="active"><a href="#">Inicio</a></li>
-                          <li><a href="#">Productos</a></li>
-                          <li><a href="#">Nosotros</a></li>
-                          <li><a href="contact.html">Contactanos</a></li>
+                          <li className="active"><Link to={"/"}>Home</Link></li>
+                          <li><Link to="/cart">Cart</Link></li>
+                          <li>  <Link to="/contact">Contact us</Link></li>
                         </ul>
                       </div>
                     </div>

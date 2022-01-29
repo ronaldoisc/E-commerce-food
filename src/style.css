@@ -342,9 +342,7 @@
 	color: #F7941D;
 }
 /* Topbar Left Nav */
-.header.shop .left-nav{
-	
-}
+
 .header.shop .top-left .list-main li:first-child{
 	padding-left:0;
 }
@@ -1105,7 +1103,6 @@
 	width:100%;
 	z-index:999;
 }
-.header.sticky .all-category{}
 .header.sticky .all-category h3{
 	cursor:pointer;
 	
@@ -1185,9 +1182,7 @@
 	background-repeat: no-repeat;
     height: 510px;
 }
-.hero-slider .text-inner {
-	
-}
+
 
 .hero-slider .hero-text {
 	padding: 0 30px;
@@ -1288,7 +1283,6 @@
 .hero-area2 .single-slider .content .des{
 	color:#fff;
 }
-.hero-area2 .single-slider .content .button{}
 .hero-area2 .single-slider .content .button .btn {
 	padding: 9px 25px;
 	border: 2px solid #fff;
@@ -1363,7 +1357,6 @@
 .hero-area3 .big-content .title span{
 	color:#F7941D;
 }
-.hero-area3 .big-content .des{}
 .hero-area3 .big-content .button{
 	margin-top:40px;
 	display:block;
@@ -1703,7 +1696,7 @@
 }
 .single-product .product-img a img {
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
 .single-product .product-img a img.hover-img {
   position: absolute;
@@ -1864,6 +1857,8 @@
 	text-transform: uppercase;
 	line-height: 1;
 	display: inline-block;
+	border: none;
+	outline: none;
 }
 .single-product .product-img .product-action-2 a:hover {
   color:#F7941D;
@@ -2165,7 +2160,6 @@
 	margin: 4px 5px 0 0;
 	font-weight:500;
 }
-.shop .single-shorter option{}
 .shop .nice-select {
 	clear: initial;
 	display: inline-block;
@@ -2742,6 +2736,7 @@
 .shop-home-list{
 	padding:0;
 	padding-bottom:100px;
+	
 }
 .shop-home-list .shop-section-title{
 	margin-bottom:20px;
@@ -2771,9 +2766,18 @@
 	margin-top: 30px;
 	border: 1px solid #eee;
 	padding: 10px;
+    width: 90%;
+	margin: 10px;
+}
+@media (min-width: 768px) {
+	.shop-home-list .single-list {
+		width: 30%;
+
+	}	
 }
 .shop-home-list .single-list .list-image{
 	position:relative;
+	
 }
 .shop-home-list .single-list .list-image.overlay:before{
 	background:#000;
@@ -2822,8 +2826,9 @@
 	padding-right:0px;
 }
 .shop-home-list .single-list img{
-	width:100%;
-	height:100%;
+    object-fit: contain;
+    height: 180px;
+    width: 100%;
 }
 .shop-home-list .single-list .content {
 	padding-top: 45px;
@@ -2978,7 +2983,7 @@
 .shopping-summery tbody .total-amount {
 	text-align: center;
 }
-.shopping-summery tbody .total-amount span{}
+
 .shopping-summery tbody .action {
 	text-align: center;
 }
@@ -3075,9 +3080,7 @@
 .shopping-cart .total-amount .right {
 	padding-left: 100px;
 }
-.shopping-cart .total-amount .right ul{
-	
-}
+
 .shopping-cart .total-amount .right ul li {
 	font-size: 15px;
 	font-weight: 400;
@@ -3134,7 +3137,7 @@
 	margin-top: 12px;
 	margin-bottom: 30px;
 }
-.shop.checkout .form{}
+
 .shop.checkout .form .form-group {
 	margin-bottom: 25px;
 }
@@ -3161,9 +3164,7 @@
 	border: none;
 	background: #F6F7FB;
 }
-.shop.checkout .form .form-group input:hover{
-	
-}
+
 .shop.checkout .nice-select {
 	width: 100%;
 	height: 45px;
@@ -4160,7 +4161,7 @@
 	visibility:visible;
 }
 /* Recent Post */
-.main-sidebar .recent-post{}
+
 .main-sidebar .single-post {
 	position: relative;
 	border-bottom: 1px solid #ddd;
@@ -4171,9 +4172,7 @@
 	padding-bottom:0px;
 	border:none;
 }
-.main-sidebar .single-post .image {
-	
-}
+
 .main-sidebar .single-post .image img{
 	float: left;
 	width: 80px;
@@ -4215,7 +4214,7 @@
 	margin-right:5px;
 }
 /* Blog Tags */
-.main-sidebar .side-tags{}
+
 .main-sidebar .side-tags .tag{
 	margin-top:40px;
 }
@@ -4457,9 +4456,7 @@
 	position: absolute;
 	left: 0;
 }
-.blog-single .single-comment .content {
-	
-}
+
 .blog-single .single-comment .content h4 {
 	color: #333;
 	font-size: 16px;
@@ -4487,7 +4484,6 @@
 	margin-bottom: 20px;
 	line-height: 22px;
 }
-.blog-single .single-comment .content .button{}
 .blog-single .single-comment .content .btn {
 	display: inline-block;
 	color: #666;
@@ -4783,7 +4779,7 @@
 	/End 404 Error CSS
 ===============================*/
 
-.free-version-banner {
+.ecommerce-banner {
   position: relative;
   background: #333;
   text-align: center;
@@ -4791,31 +4787,31 @@
   margin-bottom:100px;
 }
 
-.free-version-banner .section-title span {
+.ecommerce-banner .section-title span {
   font-weight: 500;
   text-transform: capitalize;
 }
 
-.free-version-banner .section-title {
+.ecommerce-banner .section-title {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.free-version-banner .section-title h2 {
+.ecommerce-banner .section-title h2 {
   padding-bottom: 15px;
 }
 
-.free-version-banner .section-title h2::before {
+.ecommerce-banner .section-title h2::before {
   background-color: #fff;
 }
 
-.free-version-banner .button {
+.ecommerce-banner .button {
   z-index: 5;
   margin-top: 40px;
 }
 
-.free-version-banner .button .btn {
+.ecommerce-banner .button .btn {
   background-color: #fff;
   color: #333;
   text-transform:capitalize;

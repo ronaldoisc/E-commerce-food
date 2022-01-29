@@ -1,5 +1,54 @@
-import React from 'react';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import React, { useEffect } from 'react';
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
+import { LoginScreen } from "../components/auth/LoginScreen";
+import { PublicRoute } from "./PublicRouter";
+import { PrivateRoute } from "./PrivateRouter";
+import { startChecking } from "../actions/auth";
+import { DasboardRoutes } from "./DasboardRoutes";
+
 
 export const AppRouter = () => {
-  return <div></div>;
+  const dispatch = useDispatch();
+  const { checking} = useSelector(state => state.auth);
+
+  
+
+  useEffect(() => {
+    dispatch(startChecking());
+  }, [dispatch]);
+
+
+  if (checking) {
+    return <h1>Esperee...</h1>
+  }
+
+  return (
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/login" element={
+            <PublicRoute>
+              <LoginScreen />
+            </PublicRoute>
+          } />
+
+          <Route path="/*" element={
+            <PrivateRoute>
+              <DasboardRoutes/>
+            </PrivateRoute>
+          }/>
+
+        </Routes>
+      </div>
+    </Router>
+  );
 };

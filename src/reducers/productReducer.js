@@ -3,7 +3,8 @@ import { types } from "../types/types";
 const initialState={
    
 categories:[],
-products:[]
+products:[],
+allProducts:[]
 }
 
 export const productReducer=(state=initialState,action)=>{
@@ -17,6 +18,12 @@ export const productReducer=(state=initialState,action)=>{
             return {
                 ...state,
                 products:[...action.payload]
+
+            }
+        case types.loadAllProducts:
+            return {
+                ...state,
+                allProducts:[...action.payload]
 
             }
       
