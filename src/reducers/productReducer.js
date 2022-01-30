@@ -26,6 +26,10 @@ export const productReducer=(state=initialState,action)=>{
                 allProducts:[...action.payload]
 
             }
+        case types.productsClear:
+            return {
+                ...initialState
+            }
       
         default:
             return state;

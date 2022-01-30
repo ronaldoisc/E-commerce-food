@@ -1,6 +1,6 @@
 import { useFetch } from "../helpers/fetch";
 import { types } from "../types/types";
-import { startLoadingCart } from "./cart";
+import { cartLoad, startLoadingCart } from "./cart";
 import { uiFinishLoading, uiStartLoading } from "./ui";
 
 
@@ -83,4 +83,20 @@ const startLoadingAllProducts = () => {
 const setAllProducts = (products) => ({
     type: types.loadAllProducts,
     payload: products
+});
+
+
+export const startloadProductById=(ProductId)=>{
+  return async(dispatch)=>{
+
+    const resp=await useFetch(`products/${ProductId}`);
+    const body=await resp.json();
+    dispatch(cartLoad(body))
+    // dispatch(cartLoad(body))
+
+  }
+}
+
+export const startClearProducts=()=>({
+    type:types.productsClear
 })

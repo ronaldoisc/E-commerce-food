@@ -6,7 +6,7 @@ export const CategoryList = ({ categories }) => {
     <div className="row">
       {
         categories.map(category => {
-          return <CategoryCard category={category} />
+          return <CategoryCard key={category} category={category} />
         })
       }
     </div>

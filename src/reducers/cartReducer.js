@@ -1,7 +1,7 @@
 import { types } from "../types/types";
 
 const initialState={
-    userCart:{}
+    userCart:[]
 }
 
 export const cartReducer=(state=initialState,action)=>{
@@ -9,10 +9,13 @@ export const cartReducer=(state=initialState,action)=>{
         case types.cartLoaded:
             return{
                 ...state,
-                userCart:{...action.payload}
+                userCart:[...state.userCart,action.payload]
             }
- 
-    
+        case types.cartClear:
+            return{
+               ...initialState
+            }
+
         default:
             return state;
     }

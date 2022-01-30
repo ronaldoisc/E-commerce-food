@@ -14,6 +14,7 @@ import { PublicRoute } from "./PublicRouter";
 import { PrivateRoute } from "./PrivateRouter";
 import { startChecking } from "../actions/auth";
 import { DasboardRoutes } from "./DasboardRoutes";
+import { Louder } from "../components/ui/Louder";
 
 
 export const AppRouter = () => {
@@ -28,7 +29,7 @@ export const AppRouter = () => {
 
 
   if (checking) {
-    return <h1>Esperee...</h1>
+    return <Louder loading={checking}/>
   }
 
   return (

@@ -2,6 +2,9 @@ export const types={
     setCategories:'[categories] Set categories',
     loadProductsByCategory:'[products] Load products by category',
     loadAllProducts:'[products] Load all products',
+    loadProductById:'product] Load product by id',
+
+    productsClear:'[product] Products Clear',
 
     authLogin:'[auth] Login',
     authLogout:'[auth] Logout',
@@ -15,5 +18,7 @@ export const types={
     
     cartLoaded:'[cart] Cart Loades',
 
-    cartAddNew:'[cart] Cart Add new'
+    cartAddNew:'[cart] Cart Add new',
+    
+    cartClear:'[cart] Cart Clear'
 }

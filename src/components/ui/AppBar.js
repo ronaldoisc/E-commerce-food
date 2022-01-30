@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { startLogout } from '../../actions/auth';
+import { cartClear } from '../../actions/cart';
+import { clearProducts } from '../../actions/products';
 
 export const AppBar = () => {
   const dispatch = useDispatch();
@@ -17,6 +19,7 @@ export const AppBar = () => {
 
   const handleLogout = () => {
     dispatch(startLogout());
+
   }
 
   return (
@@ -97,32 +100,32 @@ export const AppBar = () => {
                 {/* Search Form */}
 
                 <div className="sinlge-bar shopping">
-                  <a href="#w" className="single-icon"><i className="ti-bag" /> <span className="total-count">{(userCart[0] && userCart[0].products.length)}</span></a>
+                  <a href="#w" className="single-icon"><i className="ti-bag" /> <span className="total-count">{(userCart && userCart.length)}</span></a>
                   {/* Shopping Item */}
                   <div className="shopping-item">
                     <div className="dropdown-cart-header">
-                      <span>{(userCart[0] && userCart[0].products.length)} products</span>
-                      <a href="#w">View Cart</a>
+                      <span>{(userCart && userCart.length)} products</span>
+                   <Link to={"/cart"}>View Cart</Link>
                     </div>
                     <ul className="shopping-list">
                      {
-                       userCart[0] &&
-                       userCart[0].products.map(product=>{
-                         return  <li key={product.productId}>
+                       userCart &&
+                       userCart.map(product=>{
+                         return  <li key={product.id}>
                          <a href="#w" className="remove" title="Remove this item"><i className="fa fa-remove" /></a>
-                         <a className="cart-img" href="#w"><img src="https://via.placeholder.com/70x70" alt="#" /></a>
-                         <h4><a href="#w">Product Id: {product.productId}</a></h4>
-                         <p className="quantity"> <span className="amount">Quantity: {product.quantity}</span></p>
+                         <a className="cart-img" href="#w"><img src={product.image} alt="#" /></a>
+                         <h4><a href="#w">{product.title}</a></h4>
+                         <p className="quantity"> <span className="amount">{`$${product.price}`}</span></p>
                        </li>
                        })
                      }
                      
                     </ul>
                     <div className="bottom">
-                      <div className="total">
+                      {/* <div className="total">
                         <span>Total</span>
                         <span className="total-amount">$134.00</span>
-                      </div>
+                      </div> */}
                       <a href="checkout.html" className="btn animate">Checkout</a>
                     </div>
                   </div>

@@ -1,22 +1,30 @@
 import { useFetch } from "../helpers/fetch"
 import { types } from "../types/types";
 import Swal from 'sweetalert2'
+import { startClearProducts, startLoadingAllData } from "./products";
+import {  startClearCart } from "./cart";
 
 export const startLogin=(username,password)=>{
     
     return async(dispatch)=>{
-        try {
-            const resp=await useFetch('auth/login',{username,password},'POST');
-            const body=await resp.json();
-            if(!body.msg){
-               localStorage.setItem('token',JSON.stringify({username,token:body}));
-               dispatch(login({ username}));
-            }else{
-                Swal.fire('Error',body.msg,'error');
+        
+            try {
+                const resp=await useFetch('auth/login',{username,password},'POST');
+                const body=await resp.json();
+              if(body){
+                 localStorage.setItem('token',JSON.stringify({username,token:body}));
+                 dispatch(login({ username}));
+                 dispatch(startLoadingAllData());
+              }else{
+                
+                  Swal.fire('Error',body.msg,'error');
+              }
+                
+            } catch (error) {
+                Swal.fire('Error','Something was wrong','error');
+                
             }
-        } catch (error) {
-            Swal.fire('Error','Something was wrong!','error');
-        }
+       
     }
 }
 
@@ -31,7 +39,8 @@ export const startLogout=()=>{
     return (dispatch)=>{
         localStorage.clear();
         dispatch(logout());
-        
+        dispatch(startClearProducts());
+        dispatch(startClearCart());
     }
 }
 
@@ -49,6 +58,7 @@ export const startChecking=()=>{
         if(user!=null){
            const {username}= JSON.parse(user);
             dispatch(login({username}))
+            dispatch(startLoadingAllData());
         }else{
             dispatch(checkingFinish());
         }

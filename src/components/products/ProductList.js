@@ -11,7 +11,7 @@ export const ProductList = ({allProducts,loading}) => {
         <Louder loading={loading} />
         :
         allProducts.map(allProduct => {
-          return <ProductCard allProduct={allProduct}/>
+          return <ProductCard key={allProduct.id} allProduct={allProduct}/>
         })
     }
 

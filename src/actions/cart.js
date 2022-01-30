@@ -2,6 +2,7 @@
 import Swal from 'sweetalert2';
 import { useFetch } from '../helpers/fetch';
 import { types } from '../types/types';
+import { startloadProductById } from './products';
 
 
 export const startLoadingCart = () => {
@@ -9,13 +10,18 @@ export const startLoadingCart = () => {
 
         const resp = await useFetch('carts/user/2');
         const body = await resp.json();
-        dispatch(cartLoad(body))
 
+        const products = body[0].products;
 
+        products.forEach(element => {
+
+            dispatch(startloadProductById(element.productId))
+
+        });
     }
 }
 
-const cartLoad = (cart) => ({
+export const cartLoad = (cart) => ({
     type: types.cartLoaded,
     payload: cart
 })
@@ -31,7 +37,6 @@ export const cartAddNew = (productId) => {
             products: [
                 {
                     productId: productId,
-
                 }
             ]
         },
@@ -46,3 +51,22 @@ export const cartAddNew = (productId) => {
 
     }
 }
+
+export const startDeleteCart = (ProductId) => {
+    return async () => {
+
+        try {
+            const resp = await useFetch(`products/${ProductId}`, {}, 'DELETE');
+            const body = await resp.json();
+            if (body) {
+                Swal.fire('Success', 'Deleted successfuly', 'success');
+            }
+        } catch (error) {
+            Swal.fire('Error', 'Something was wrong', 'error');
+        }
+    }
+}
+
+export const startClearCart = () => ({
+    type: types.cartClear
+})
