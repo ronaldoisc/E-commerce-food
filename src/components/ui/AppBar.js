@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { startLogout } from '../../actions/auth';
-import { cartClear } from '../../actions/cart';
-import { clearProducts } from '../../actions/products';
 
 export const AppBar = () => {
   const dispatch = useDispatch();
