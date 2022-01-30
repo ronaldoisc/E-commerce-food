@@ -92,8 +92,7 @@ export const startloadProductById=(ProductId)=>{
     const resp=await useFetch(`products/${ProductId}`);
     const body=await resp.json();
     dispatch(cartLoad(body))
-    // dispatch(cartLoad(body))
-
+   
   }
 }
 
