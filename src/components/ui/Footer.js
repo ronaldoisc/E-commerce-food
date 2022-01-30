@@ -12,7 +12,7 @@ export const Footer = () => {
               
                   <div className="single-footer about">
                     <div className="logo">
-                      <a href="index.html"><img src="images/logo2.png" alt="#" /></a>
+                      <a href="index.html"><img src="images/logo2.png" alt="logo" width={100} height={100} /></a>
                     </div>
                     <p className="text"> We are a Mexican company with more than 20 years of experience in e-commerce focused on the sale of products</p>
                     <p className="call">Do you have a question? call us<span><a href="tel:123456789">+52 2311030318</a></span></p>
@@ -24,11 +24,11 @@ export const Footer = () => {
                   <div className="single-footer links">
                     <h4>Information</h4>
                     <ul>
-                      <li><a href="#ww">About us</a></li>
+                      <li><a href="https://www.google.com.mx/">About us</a></li>
                     
-                      <li><a href="#www">Terms&amp; conditions</a></li>
-                      <li><a href="#www">Contact us</a></li>
-                      <li><a href="#www">Help</a></li>
+                      <li><a href="https://www.google.com.mx/">Terms&amp; conditions</a></li>
+                      <li><a href="https://www.google.com.mx/">Contact us</a></li>
+                      <li><a href="https://www.google.com.mx/">Help</a></li>
                     </ul>
                   </div>
                   {/* End Single Widget */}
@@ -38,10 +38,10 @@ export const Footer = () => {
                   <div className="single-footer links">
                     <h4>Customer client</h4>
                     <ul>
-                      <li><a href="#www">Payment methods</a></li>
-                      <li><a href="#www">Refuns</a></li>
-                      <li><a href="#www">Return</a></li>
-                      <li><a href="#www">Delivery</a></li>
+                      <li><a href="https://www.google.com.mx/">Payment methods</a></li>
+                      <li><a href="https://www.google.com.mx/">Refuns</a></li>
+                      <li><a href="https://www.google.com.mx/">Return</a></li>
+                      <li><a href="https://www.google.com.mx/">Delivery</a></li>
                     
                     </ul>
                   </div>
@@ -62,10 +62,10 @@ export const Footer = () => {
                     </div>
                     {/* End Single Widget */}
                     <ul>
-                      <li><a href="#www"><i className="ti-facebook" /></a></li>
-                      <li><a href="#www"><i className="ti-twitter" /></a></li>
-                      <li><a href="#ww"><i className="ti-flickr" /></a></li>
-                      <li><a href="#ww"><i className="ti-instagram" /></a></li>
+                      <li><a href="https://www.google.com.mx/"><i className="ti-facebook" /></a></li>
+                      <li><a href="https://www.google.com.mx/"><i className="ti-twitter" /></a></li>
+                      <li><a href="https://www.google.com.mx/"><i className="ti-flickr" /></a></li>
+                      <li><a href="https://www.google.com.mx/"><i className="ti-instagram" /></a></li>
                     </ul>
                   </div>
                   {/* End Single Widget */}
@@ -85,7 +85,7 @@ export const Footer = () => {
                   </div>
                   <div className="col-lg-6 col-12">
                     <div className="right">
-                      <img src="images/payments.png" alt="#" />
+                      <img src="images/payments.png" alt="payment" height={300} width={300} />
                     </div>
                   </div>
                 </div>

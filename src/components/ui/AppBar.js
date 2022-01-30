@@ -46,7 +46,7 @@ export const AppBar = () => {
                   <li><i className="ti-user" /> <a href="#w">{user.username}</a></li>
                   <li>
                     <i className="ti-power-off" />
-                    <a href="#w" onClick={handleLogout}>Logout</a>
+                    <a href="https://www.google.com.mx/" onClick={handleLogout}>Logout</a>
 
                   </li>
                 </ul>
@@ -63,7 +63,7 @@ export const AppBar = () => {
             <div className="col-lg-2 col-md-2 col-12">
               {/* Logo */}
               <div className="logo">
-                <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+                <a href="index.html"><img src="images/logo.png" alt="logo" height={150} width={120} /></a>
               </div>
               {/*/ End Logo */}
               {/* Search Form */}
@@ -98,7 +98,7 @@ export const AppBar = () => {
                 {/* Search Form */}
 
                 <div className="sinlge-bar shopping">
-                  <a href="#w" className="single-icon"><i className="ti-bag" /> <span className="total-count">{(userCart && userCart.length)}</span></a>
+                  <a href="https://www.google.com.mx/" className="single-icon"><i className="ti-bag" /> <span className="total-count">{(userCart && userCart.length)}</span></a>
                   {/* Shopping Item */}
                   <div className="shopping-item">
                     <div className="dropdown-cart-header">
@@ -110,9 +110,9 @@ export const AppBar = () => {
                        userCart &&
                        userCart.map(product=>{
                          return  <li key={product.id}>
-                         <a href="#w" className="remove" title="Remove this item"><i className="fa fa-remove" /></a>
-                         <a className="cart-img" href="#w"><img src={product.image} alt="#" /></a>
-                         <h4><a href="#w">{product.title}</a></h4>
+                         <a href="https://www.google.com.mx/" className="remove" title="Remove this item"><i className="fa fa-remove" /></a>
+                         <a className="cart-img" href="https://www.google.com.mx/"><img src={product.image} alt="cart" /></a>
+                         <h4><a href="https://www.google.com.mx/">{product.title}</a></h4>
                          <p className="quantity"> <span className="amount">{`$${product.price}`}</span></p>
                        </li>
                        })

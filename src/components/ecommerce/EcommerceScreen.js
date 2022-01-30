@@ -61,13 +61,7 @@ export const EcommerceScreen = () => {
             <div className="col-12">
               <div className="product-info">
                 <div className="nav-main">
-                  <ul className="nav nav-tabs" id="myTab" role="tablist">
-                    {
-                      categories.map(category => {
-                        return <CategoryItem key={category} handleClickCategory={handleClickCategory} category={category} />
-                      })
-                    }
-                  </ul>
+                  <CategoryItem handleClickCategory={handleClickCategory} categories={categories}/>
 
                 </div>
                 <div className="tab-content" id="myTabContent">
