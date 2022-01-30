@@ -35,7 +35,7 @@ export const AppBar = () => {
                   <li><i className="ti-email" /> tellezleal9928@gmail.com</li>
                 </ul>
               </div>
-              {/*/ End Top Left */}
+            
             </div>
             <div className="col-lg-7 col-md-12 col-12">
               {/* Top Right */}
