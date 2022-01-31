@@ -46,8 +46,7 @@ export const AppBar = () => {
                   <li><i className="ti-user" /> <a href="#w">{user.username}</a></li>
                   <li>
                     <i className="ti-power-off" />
-                    <a href="https://www.google.com.mx/" onClick={handleLogout}>Logout</a>
-
+                    <button onClick={handleLogout}>Logout</button>
                   </li>
                 </ul>
               </div>

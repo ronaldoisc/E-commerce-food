@@ -346,6 +346,7 @@
 .header.shop .top-left .list-main li:first-child{
 	padding-left:0;
 }
+
 .header.shop .top-left .list-main li i{
 	display: inline-block;
 	margin-right: 4px;
@@ -376,6 +377,11 @@
 .header.shop .list-main li:last-child{
 	padding-right:0;
 	border:none;
+}
+.header.shop .list-main li button{
+	outline: none;
+	background-color: white;
+	border: none;
 }
 .header.shop .list-main li a{
 	color:#333;
