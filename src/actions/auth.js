@@ -54,7 +54,7 @@ const logout=()=>({
 export const startChecking=()=>{
     return (dispatch)=>{
 
-        const user=localStorage.getItem('token');
+        const user=localStorage.getItem('user');
         
         if(user!=null){
            const {username}= JSON.parse(user);
