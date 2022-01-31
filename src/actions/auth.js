@@ -10,8 +10,8 @@ export const startLogin=(username,password)=>{
         
             try {
                 const resp=await useFetch('auth/login',{username,password},'POST');
-                const body=await resp.text() || resp.json();
-                console.log(body);
+                const body=await resp.json();
+
               if(body.token){
                  localStorage.setItem('user',JSON.stringify({username,token:body}));
                  dispatch(login({ username}));
