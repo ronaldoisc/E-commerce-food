@@ -98,7 +98,7 @@ export const AppBar = () => {
                 {/* Search Form */}
 
                 <div className="sinlge-bar shopping">
-                  <a href="https://www.google.com.mx/" className="single-icon"><i className="ti-bag" /> <span className="total-count">{(userCart && userCart.length)}</span></a>
+                  <a href="#w" className="single-icon"><i className="ti-bag" /> <span className="total-count">{(userCart && userCart.length)}</span></a>
                   {/* Shopping Item */}
                   <div className="shopping-item">
                     <div className="dropdown-cart-header">
@@ -110,9 +110,8 @@ export const AppBar = () => {
                        userCart &&
                        userCart.map(product=>{
                          return  <li key={product.id}>
-                         <a href="https://www.google.com.mx/" className="remove" title="Remove this item"><i className="fa fa-remove" /></a>
                          <a className="cart-img" href="https://www.google.com.mx/"><img src={product.image} alt="cart" /></a>
-                         <h4><a href="https://www.google.com.mx/">{product.title}</a></h4>
+                         <h4>{product.title}</h4>
                          <p className="quantity"> <span className="amount">{`$${product.price}`}</span></p>
                        </li>
                        })
@@ -120,10 +119,6 @@ export const AppBar = () => {
                      
                     </ul>
                     <div className="bottom">
-                      {/* <div className="total">
-                        <span>Total</span>
-                        <span className="total-amount">$134.00</span>
-                      </div> */}
                       <a href="checkout.html" className="btn animate">Checkout</a>
                     </div>
                   </div>
