@@ -21,8 +21,6 @@ export const AppRouter = () => {
   const dispatch = useDispatch();
   const { checking} = useSelector(state => state.auth);
 
-  
-
   useEffect(() => {
     dispatch(startChecking());
   }, [dispatch]);

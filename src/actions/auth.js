@@ -10,14 +10,14 @@ export const startLogin=(username,password)=>{
         
             try {
                 const resp=await useFetch('auth/login',{username,password},'POST');
-                const body=await resp.json();
-              if(body){
-                 localStorage.setItem('token',JSON.stringify({username,token:body}));
+                const body=await resp.text() || resp.json();
+                console.log(body);
+              if(body.token){
+                 localStorage.setItem('user',JSON.stringify({username,token:body}));
                  dispatch(login({ username}));
                  dispatch(startLoadingAllData());
               }else{
-                
-                  Swal.fire('Error',body.msg,'error');
+                  Swal.fire('Error',body,'error');
               }
                 
             } catch (error) {
@@ -53,8 +53,9 @@ const logout=()=>({
 
 export const startChecking=()=>{
     return (dispatch)=>{
-        //check if exist a token
+
         const user=localStorage.getItem('token');
+        
         if(user!=null){
            const {username}= JSON.parse(user);
             dispatch(login({username}))
