@@ -1,29 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { startDeleteCart } from '../../actions/cart';
+
+
+import { useCart } from '../../hooks/useCart';
 import { AppBar } from '../ui/AppBar';
 import { TableCart } from './TableCart';
 
 export const CartScreen = () => {
- const { userCart } = useSelector(state => state.cart);
- const dispatch = useDispatch();
-
-  const [total, settotal] = useState(0);
-
-  useEffect(() => {
-    let total = 0;
-    userCart.map(userc => {
-      total += userc.price
-      return settotal(total);
-    })
-  }, [userCart]);
-
-
-  const handleDeleteCart=(ProductId)=>{
-    dispatch(startDeleteCart(ProductId))
-  }
-
-
+  
+    const {userCart,total,handleDeleteCart}=useCart();
+  
   return <div>
     <AppBar />
     <div className="shopping-cart section">

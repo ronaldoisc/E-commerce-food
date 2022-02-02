@@ -7,7 +7,6 @@ import {  startClearCart } from "./cart";
 export const startLogin=(username,password)=>{
     
     return async(dispatch)=>{
-        
             try {
                 const resp=await useFetch('auth/login',{username,password},'POST');
                 const body=await resp.json();
@@ -55,7 +54,6 @@ export const startChecking=()=>{
     return (dispatch)=>{
 
         const user=localStorage.getItem('user');
-        console.log(user);
         if(user!=null){
            const {username}= JSON.parse(user);
             dispatch(login({username}))

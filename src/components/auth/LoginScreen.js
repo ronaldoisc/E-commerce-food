@@ -9,12 +9,8 @@ export const LoginScreen = () => {
 
 
   const dispatch = useDispatch();
-  
-
-  const [ formLoginValues, handleLoginInputChange] = useForm( {
-    username:'',
-    password:''
-});
+  const [ formLoginValues, handleLoginInputChange] = useForm( {username:'', password:''
+    });
 
 const {username,password}=formLoginValues;
 
@@ -36,7 +32,7 @@ const handleLoginSubmit=(e)=>{
         <h1>E-COMMERCE</h1>
         <form onSubmit={handleLoginSubmit}>
 
-          <label htmlFor="username">Email</label>
+          <label htmlFor="username">Username</label>
           <input type="text" name='username' value={username} onChange={handleLoginInputChange} placeholder='write your email' required />
           <label htmlFor="password">Password</label>
           <input type="text" name='password' value={password}  onChange={handleLoginInputChange} placeholder='write your password' required />
