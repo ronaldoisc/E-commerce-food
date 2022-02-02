@@ -27,7 +27,9 @@ export const AppRouter = () => {
 
 
   if (checking) {
-    return <Louder loading={checking}/>
+
+    return <h2>Espere..</h2>
+    // return <Louder loading={checking}/>
   }
 
   return (

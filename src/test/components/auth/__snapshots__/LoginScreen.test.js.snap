@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in the <LoginScreen/> should show correctly 1`] = `
+<div>
+  <div
+    className="container-login"
+  >
+    <div
+      className="container--login__column__signUp"
+    >
+      <h1>
+        Hi!,welcome
+      </h1>
+      <p>
+        Go ahead get access to your account and buy something!
+      </p>
+    </div>
+    <div
+      className="container-login__column__form"
+    >
+      <h1>
+        E-COMMERCE
+      </h1>
+      <form
+        onSubmit={[Function]}
+      >
+        <label
+          htmlFor="username"
+        >
+          Email
+        </label>
+        <input
+          name="username"
+          onChange={[Function]}
+          placeholder="write your email"
+          required={true}
+          type="text"
+          value=""
+        />
+        <label
+          htmlFor="password"
+        >
+          Password
+        </label>
+        <input
+          name="password"
+          onChange={[Function]}
+          placeholder="write your password"
+          required={true}
+          type="text"
+          value=""
+        />
+        <button
+          className="btn btn-login"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;

@@ -8,10 +8,13 @@ export const AppBar = () => {
   const dispatch = useDispatch();
 
 
-  const { auth,cart } = useSelector(state => state);
+  const { user} = useSelector(state => state.auth);
 
-  const {user}=auth;
-  const {userCart}=cart;
+  const { userCart} = useSelector(state => state.cart);
+
+  // const {user}=auth;
+  // const {userCart}=cart;
+  
 
 
 
@@ -43,7 +46,7 @@ export const AppBar = () => {
                 <ul className="list-main">
                   <li><i className="ti-location-pin" /> Mexico</li>
                   <li><i className="ti-alarm-clock" /> <a href="#w">Daily deal</a></li>
-                  <li><i className="ti-user" /> <a href="#w">{user.username}</a></li>
+                  <li><i className="ti-user" /> <a href="#w">{user && user.username}</a></li>
                   <li>
                     <i className="ti-power-off" />
                     <button onClick={handleLogout}>Logout</button>
@@ -101,7 +104,7 @@ export const AppBar = () => {
                   {/* Shopping Item */}
                   <div className="shopping-item">
                     <div className="dropdown-cart-header">
-                      <span>{(userCart && userCart.length)} products</span>
+                      {/* <span>{(userCart && userCart.length)} products</span> */}
                    <Link to={"/cart"}>View Cart</Link>
                     </div>
                     <ul className="shopping-list">

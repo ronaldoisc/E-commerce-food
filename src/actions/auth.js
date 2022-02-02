@@ -13,7 +13,7 @@ export const startLogin=(username,password)=>{
                 const body=await resp.json();
 
               if(body.token){
-                 localStorage.setItem('user',JSON.stringify({username,token:body}));
+                 localStorage.setItem('user',JSON.stringify({username,token:body.token}));
                  dispatch(login({ username}));
                  dispatch(startLoadingAllData());
               }else{
@@ -28,7 +28,7 @@ export const startLogin=(username,password)=>{
     }
 }
 
-const login=(user)=>({
+export const login=(user)=>({
     type:types.authLogin,
     payload:user
 
@@ -44,7 +44,7 @@ export const startLogout=()=>{
     }
 }
 
-const logout=()=>({
+export const logout=()=>({
     type:types.authLogout
 });
 
@@ -55,7 +55,7 @@ export const startChecking=()=>{
     return (dispatch)=>{
 
         const user=localStorage.getItem('user');
-        
+        console.log(user);
         if(user!=null){
            const {username}= JSON.parse(user);
             dispatch(login({username}))

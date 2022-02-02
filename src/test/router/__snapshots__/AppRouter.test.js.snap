@@ -1,0 +1,910 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test in the <AppRouter/> should show the private route 1`] = `
+<div>
+  <div>
+    <header
+      className="header shop"
+    >
+      <div
+        className="topbar"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-5 col-md-12 col-12"
+            >
+              <div
+                className="top-left"
+              >
+                <ul
+                  className="list-main"
+                >
+                  <li>
+                    <i
+                      className="ti-headphone-alt"
+                    />
+                     231-1030318
+                  </li>
+                  <li>
+                    <i
+                      className="ti-email"
+                    />
+                     tellezleal9928@gmail.com
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className="col-lg-7 col-md-12 col-12"
+            >
+              <div
+                className="right-content"
+              >
+                <ul
+                  className="list-main"
+                >
+                  <li>
+                    <i
+                      className="ti-location-pin"
+                    />
+                     Mexico
+                  </li>
+                  <li>
+                    <i
+                      className="ti-alarm-clock"
+                    />
+                     
+                    <a
+                      href="#w"
+                    >
+                      Daily deal
+                    </a>
+                  </li>
+                  <li>
+                    <i
+                      className="ti-user"
+                    />
+                     
+                    <a
+                      href="#w"
+                    >
+                      ronaldo
+                    </a>
+                  </li>
+                  <li>
+                    <i
+                      className="ti-power-off"
+                    />
+                    <button
+                      onClick={[Function]}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="middle-inner"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-2 col-md-2 col-12"
+            >
+              <div
+                className="logo"
+              >
+                <a
+                  href="index.html"
+                >
+                  <img
+                    alt="logo"
+                    height={150}
+                    src="images/logo.png"
+                    width={120}
+                  />
+                </a>
+              </div>
+              <div
+                className="search-top"
+              >
+                <div
+                  className="top-search"
+                >
+                  <a
+                    href="#0"
+                  >
+                    <i
+                      className="ti-search"
+                    />
+                  </a>
+                </div>
+                <div
+                  className="search-top"
+                >
+                  <form
+                    className="search-form"
+                  >
+                    <input
+                      name="search"
+                      placeholder="Search here..."
+                      type="text"
+                    />
+                    <button
+                      type="submit"
+                      value="search"
+                    >
+                      <i
+                        className="ti-search"
+                      />
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div
+                className="mobile-nav"
+              />
+            </div>
+            <div
+              className="col-lg-8 col-md-7 col-12"
+            >
+              <div
+                className="search-bar-top"
+              >
+                <div
+                  className="search-bar"
+                >
+                  <form>
+                    <input
+                      name="search"
+                      placeholder="Search a product here.."
+                      type="search"
+                    />
+                    <button
+                      className="btnn"
+                    >
+                      <i
+                        className="ti-search"
+                      />
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-lg-2 col-md-3 col-12"
+            >
+              <div
+                className="right-bar"
+              >
+                <div
+                  className="sinlge-bar shopping"
+                >
+                  <a
+                    className="single-icon"
+                    href="#w"
+                  >
+                    <i
+                      className="ti-bag"
+                    />
+                     
+                    <span
+                      className="total-count"
+                    >
+                      0
+                    </span>
+                  </a>
+                  <div
+                    className="shopping-item"
+                  >
+                    <div
+                      className="dropdown-cart-header"
+                    >
+                      <a
+                        href="/cart"
+                        onClick={[Function]}
+                      >
+                        View Cart
+                      </a>
+                    </div>
+                    <ul
+                      className="shopping-list"
+                    />
+                    <div
+                      className="bottom"
+                    >
+                      <a
+                        className="btn animate"
+                        href="checkout.html"
+                      >
+                        Checkout
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="header-inner"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="cat-nav-head"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-lg-9 col-12"
+              >
+                <div
+                  className="menu-area"
+                >
+                  <nav
+                    className="navbar navbar-expand-lg"
+                  >
+                    <div
+                      className="navbar-collapse"
+                    >
+                      <div
+                        className="nav-inner"
+                      >
+                        <ul
+                          className="nav main-menu menu navbar-nav"
+                        >
+                          <li
+                            className="active"
+                          >
+                            <a
+                              href="/"
+                              onClick={[Function]}
+                            >
+                              Home
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/cart"
+                              onClick={[Function]}
+                            >
+                              Cart
+                            </a>
+                          </li>
+                          <li>
+                              
+                            <a
+                              href="/contact"
+                              onClick={[Function]}
+                            >
+                              Contact us
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section
+      className="hero-slider"
+    >
+      <div
+        className="single-slider"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-lg-9 offset-lg-3 col-12"
+            >
+              <div
+                className="text-inner"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col-lg-7 col-12"
+                  >
+                    <div
+                      className="hero-text"
+                    >
+                      <h1>
+                        ¿What do you need to buy today?
+                      </h1>
+                      <p>
+                        We satisfy your cravings, so ask now and we take it to the door from your house
+                      </p>
+                      <div
+                        className="button"
+                      >
+                        <a
+                          className="btn"
+                          href="https://fakestoreapi.com/docs"
+                        >
+                          Try now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      className="small-banner section"
+    >
+      <div
+        className="container-fluid"
+      >
+        <h1>
+          Categories
+        </h1>
+        <hr />
+        <div
+          className="row"
+        />
+      </div>
+    </section>
+    <div
+      className="product-area section"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-12"
+          >
+            <div
+              className="section-title"
+            >
+              <h2>
+                Products by category
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col-12"
+          >
+            <div
+              className="product-info"
+            >
+              <div
+                className="nav-main"
+              >
+                <ul
+                  className="nav nav-tabs"
+                  id="myTab"
+                />
+              </div>
+              <div
+                className="tab-content"
+                id="myTabContent"
+              >
+                <div
+                  className="tab-pane fade show active"
+                  id="man"
+                  role="tabpanel"
+                >
+                  <div
+                    className="tab-single"
+                  >
+                    <div
+                      className="row"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section
+      className="section ecommerce-banner mt-5"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row align-items-center"
+        >
+          <div
+            className="col-md-8 offset-md-2 col-xs-12"
+          >
+            <div
+              className="section-title mb-60"
+            >
+              <span
+                className="text-white wow fadeInDown"
+                data-wow-delay=".2s"
+                style={
+                  Object {
+                    "animationDelay": "0.2s",
+                    "animationName": "fadeInDown",
+                    "visibility": "visible",
+                  }
+                }
+              >
+                Save time
+              </span>
+              <h2
+                className="text-white wow fadeInUp"
+                data-wow-delay=".4s"
+                style={
+                  Object {
+                    "animationDelay": "0.4s",
+                    "animationName": "fadeInUp",
+                    "visibility": "visible",
+                  }
+                }
+              >
+                We run to make your life easier
+                <br />
+                 and work the 24 hours
+              </h2>
+              <p
+                className="text-white wow fadeInUp"
+                data-wow-delay=".6s"
+                style={
+                  Object {
+                    "animationDelay": "0.6s",
+                    "animationName": "fadeInUp",
+                    "visibility": "visible",
+                  }
+                }
+              >
+                order everything in the same place!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      className="shop-home-list section"
+    >
+      <div
+        className="container"
+      >
+        <h1>
+          All Products
+        </h1>
+        <div
+          className="row"
+        />
+      </div>
+    </section>
+    <section
+      className="shop-services section home"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-3 col-md-6 col-12"
+          >
+            <div
+              className="single-service"
+            >
+              <i
+                className="ti-rocket"
+              />
+              <h4>
+                Free shiping
+              </h4>
+              <p>
+                Orders over $100
+              </p>
+            </div>
+          </div>
+          <div
+            className="col-lg-3 col-md-6 col-12"
+          >
+            <div
+              className="single-service"
+            >
+              <i
+                className="ti-reload"
+              />
+              <h4>
+                Free Return
+              </h4>
+              <p>
+                Within 30 days returns
+              </p>
+            </div>
+          </div>
+          <div
+            className="col-lg-3 col-md-6 col-12"
+          >
+            <div
+              className="single-service"
+            >
+              <i
+                className="ti-lock"
+              />
+              <h4>
+                Sucure Payment
+              </h4>
+              <p>
+                100% secure payment
+              </p>
+            </div>
+          </div>
+          <div
+            className="col-lg-3 col-md-6 col-12"
+          >
+            <div
+              className="single-service"
+            >
+              <i
+                className="ti-tag"
+              />
+              <h4>
+                Best Peice
+              </h4>
+              <p>
+                Guaranteed price
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      className="footer"
+    >
+      <div
+        className="footer-top section"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-5 col-md-6 col-12"
+            >
+              <div
+                className="single-footer about"
+              >
+                <div
+                  className="logo"
+                >
+                  <a
+                    href="index.html"
+                  >
+                    <img
+                      alt="logo"
+                      height={100}
+                      src="images/logo2.png"
+                      width={100}
+                    />
+                  </a>
+                </div>
+                <p
+                  className="text"
+                >
+                   We are a Mexican company with more than 20 years of experience in e-commerce focused on the sale of products
+                </p>
+                <p
+                  className="call"
+                >
+                  Do you have a question? call us
+                  <span>
+                    <a
+                      href="tel:123456789"
+                    >
+                      +52 2311030318
+                    </a>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div
+              className="col-lg-2 col-md-6 col-12"
+            >
+              <div
+                className="single-footer links"
+              >
+                <h4>
+                  Information
+                </h4>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      About us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      Terms& conditions
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      Contact us
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      Help
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className="col-lg-2 col-md-6 col-12"
+            >
+              <div
+                className="single-footer links"
+              >
+                <h4>
+                  Customer client
+                </h4>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      Payment methods
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      Refuns
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      Return
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      Delivery
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className="col-lg-3 col-md-6 col-12"
+            >
+              <div
+                className="single-footer social"
+              >
+                <h4>
+                  Get in touch
+                </h4>
+                <div
+                  className="contact"
+                >
+                  <ul>
+                    <li>
+                      NO. 342 - Teziutlán Puebla
+                    </li>
+                    <li>
+                      E-commerce
+                    </li>
+                    <li>
+                      delivery@gmail.com
+                    </li>
+                    <li>
+                      +52 2311030318
+                    </li>
+                  </ul>
+                </div>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      <i
+                        className="ti-facebook"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      <i
+                        className="ti-twitter"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      <i
+                        className="ti-flickr"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.google.com.mx/"
+                    >
+                      <i
+                        className="ti-instagram"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="copyright"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="inner"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-lg-6 col-12"
+              >
+                <div
+                  className="left"
+                >
+                  <p>
+                    Copyright © 2022 Ronaldo Tellez Leal-  Todos los derechos reservados.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="col-lg-6 col-12"
+              >
+                <div
+                  className="right"
+                >
+                  <img
+                    alt="payment"
+                    height={300}
+                    src="images/payments.png"
+                    width={300}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`test in the <AppRouter/> should show the public route 1`] = `
+<div>
+  <div>
+    <div
+      className="container-login"
+    >
+      <div
+        className="container--login__column__signUp"
+      >
+        <h1>
+          Hi!,welcome
+        </h1>
+        <p>
+          Go ahead get access to your account and buy something!
+        </p>
+      </div>
+      <div
+        className="container-login__column__form"
+      >
+        <h1>
+          E-COMMERCE
+        </h1>
+        <form
+          onSubmit={[Function]}
+        >
+          <label
+            htmlFor="username"
+          >
+            Email
+          </label>
+          <input
+            name="username"
+            onChange={[Function]}
+            placeholder="write your email"
+            required={true}
+            type="text"
+            value=""
+          />
+          <label
+            htmlFor="password"
+          >
+            Password
+          </label>
+          <input
+            name="password"
+            onChange={[Function]}
+            placeholder="write your password"
+            required={true}
+            type="text"
+            value=""
+          />
+          <button
+            className="btn btn-login"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test in the <AppRouter/> should show wait 1`] = `
+<h2>
+  Espere..
+</h2>
+`;
